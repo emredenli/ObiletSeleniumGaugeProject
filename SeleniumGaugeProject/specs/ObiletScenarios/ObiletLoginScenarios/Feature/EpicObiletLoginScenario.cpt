@@ -1,0 +1,11 @@
+Created by testinium on 3.02.2023
+
+This is a concept file with following syntax for each concept.
+# Obilet - Başarılı Login Senaryosu
+* "https://www.obilet.com/" gelen url ile aynı mı
+* "ObiletUyeGirisiBtn" elementine tıklanır
+* "ObiletUyeGirisiHeaderText" elementinin görünür olması kontrol edilir
+* "ObiletEPostaAdresiTextBox" elementine "ta3320594@gmail.com" değerini yaz
+* "ObiletParolaTextBox" elementine "testAccount123" değerini yaz
+* "ObiletGirisYapBtn" elementine tıklanır
+* "ObiletHesabımText" elementinin görünür olması kontrol edilir

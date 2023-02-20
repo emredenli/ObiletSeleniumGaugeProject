@@ -4,6 +4,10 @@
     "value": "li[class='login'] a",
     "type": "cssSelector"
   },
+  "ObiletUyeGirisiHeaderText": {
+    "value": "//h2[text()='Üye Girişi']",
+    "type": "xpath"
+  },
   "ObiletEPostaAdresiTextBox": {
     "value": "input[name='username']",
     "type": "cssSelector"
@@ -19,8 +23,15 @@
   "ObiletErrorMessage": {
     "value": "label[class='error error-message']",
     "type": "cssSelector"
+  },
+  "ObiletHesabımText": {
+    "value": "//a[text()='Hesabım']",
+    "type": "xpath"
+  },
+  "": {
+    "value": "",
+    "type": ""
   }
-
 
 }
 
