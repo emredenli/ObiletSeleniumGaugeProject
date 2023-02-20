@@ -1,0 +1,27 @@
+{
+
+  "ObiletUyeGirisiBtn": {
+    "value": "li[class='login'] a",
+    "type": "cssSelector"
+  },
+  "ObiletEPostaAdresiTextBox": {
+    "value": "input[name='username']",
+    "type": "cssSelector"
+  },
+  "ObiletParolaTextBox": {
+    "value": "input[name='password']",
+    "type": "cssSelector"
+  },
+  "ObiletGirisYapBtn": {
+    "value": "button[class='login login-button']",
+    "type": "cssSelector"
+  },
+  "ObiletErrorMessage": {
+    "value": "label[class='error error-message']",
+    "type": "cssSelector"
+  }
+
+
+}
+
+

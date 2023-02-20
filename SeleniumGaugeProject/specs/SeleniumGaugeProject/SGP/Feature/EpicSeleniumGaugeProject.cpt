@@ -1,0 +1,10 @@
+Created by testinium on 3.02.2023
+
+This is a concept file with following syntax for each concept.
+# Concept Heading
+* "ObiletUyeGirisiBtn" elementine tıklanır
+* "ObiletEPostaAdresiTextBox" elementine "denli.emree@gmail.com" değerini yaz
+* "ObiletParolaTextBox" elementine "emredenli123" değerini yaz
+* "ObiletGirisYapBtn" elementine tıklanır
+* "ObiletErrorMessage" elementinin görünür olması kontrol edilir
+* "1" saniye bekle
