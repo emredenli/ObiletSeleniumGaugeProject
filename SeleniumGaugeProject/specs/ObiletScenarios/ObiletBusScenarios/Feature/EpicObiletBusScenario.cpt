@@ -1,0 +1,28 @@
+
+# Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* "ObiletCookiesCloseBtn" elementine tıklanır
+* "ObiletCookiesCloseBtn" elementinin sayfada görünür olmadığı kontrol edilir
+
+# Obilet - Anasayfada 'Otobüs' seçim butonuna tıklanır
+* "ObiletBusSelectBtn" elementine tıklanır
+
+# Obilet - <kalkısNoktası> kalkış noktası seçilir
+* "ObiletKalkisNoktasiTextBox" elementine <kalkısNoktası> değerini yaz
+* "ObiletManisaSelect" elementinin görünür olması kontrol edilir
+* "500" milisaniye bekle
+* "ObiletManisaSelect" elementine tıklanır
+
+# Obilet - <varisNoktası> varış noktası seçilir
+* "ObiletVarisNoktasiTextBox" elementine <varisNoktası> değerini yaz
+* "ObiletIstanbulAvrupaSelect" elementinin görünür olması kontrol edilir
+* "500" milisaniye bekle
+* "ObiletIstanbulAvrupaSelect" elementine tıklanır
+
+# Obilet - Yolculuk Tarihi textine tıklanır ve açılan takvimden rastgele bir gün seçilir
+* "ObiletYolculukTarihiTextBox" elementine tıklanır
+* Bilet bulma ekranındaki yolculuk tarihi alanından rastgele tarih seç
+* "150" milisaniye bekle
+* "ObiletYolculukTarihiTakvim" elementinin sayfada görünür olmadığı kontrol edilir
+
+# Obilet - Otobüs Bileti Bul butonuna tıklanır
+* "ObiletOtobusBiletiBulBtn" elementine tıklanır

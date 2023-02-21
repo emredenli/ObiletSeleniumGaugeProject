@@ -28,9 +28,45 @@
     "value": "//a[text()='Hesabım']",
     "type": "xpath"
   },
-  "": {
-    "value": "",
-    "type": ""
+  "ObiletKullanıcıAdıveSifreniziKontrolEderekTekrarDeneyinizText": {
+    "value": "//label[contains(text(), 'Kullanıcı adı ve şifrenizi kontrol ederek tekrar deneyiniz.') and @class='error error-message']",
+    "type": "xpath"
+  },
+  "ObiletBusSelectBtn": {
+    "value": "a[data-event-action='Bus']",
+    "type": "cssSelector"
+  },
+  "ObiletKalkisNoktasiTextBox": {
+    "value": "origin-input",
+    "type": "id"
+  },
+  "ObiletVarisNoktasiTextBox": {
+    "value": "destination-input",
+    "type": "id"
+  },
+  "ObiletYolculukTarihiTextBox": {
+    "value": "departure-input",
+    "type": "id"
+  },
+  "ObiletCookiesCloseBtn": {
+    "value": "div[class='cookies-policy'] svg",
+    "type": "cssSelector"
+  },
+  "ObiletOtobusBiletiBulBtn": {
+    "value": "button#search-button",
+    "type": "cssSelector"
+  },
+  "ObiletManisaSelect": {
+    "value": "#origin > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletIstanbulAvrupaSelect": {
+    "value": "#destination > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletYolculukTarihiTakvim": {
+    "value": "div[data-month]",
+    "type": "cssSelector"
   }
 
 }

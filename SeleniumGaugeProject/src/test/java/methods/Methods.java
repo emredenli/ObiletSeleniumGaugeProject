@@ -341,4 +341,16 @@ public class Methods {
         return by;
     }
 
+    public void clickAlertCancelButton() {
+
+        webDriver.switchTo().alert().dismiss();
+
+    }
+
+    public void clickAlertOkButton() {
+
+        webDriver.switchTo().alert().accept();
+
+    }
+
 }

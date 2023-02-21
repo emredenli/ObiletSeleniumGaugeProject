@@ -13,8 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
@@ -35,6 +37,12 @@ public class StepImplementation extends Driver {
         System.out.println(seconds + " saniye beklendi");
         logger.info(seconds + " saniye beklendi");
 
+    }
+
+    @Step("<milliseconds> milisaniye bekle")
+    public void waitByMilliSeconds(long milliseconds) {
+
+        methods.waitByMilliSeconds(milliseconds);
     }
 
     @Step("<key> elementine tıklanır")
@@ -87,12 +95,12 @@ public class StepImplementation extends Driver {
         int elementSize = elements.size();
 
         if(elementSize > 0) {
-            System.out.println("( " + key + ") elementi gorunur ");
-            logger.info("( " + key + ") elementi gorunur ");
+            System.out.println("( " + key + " ) elementi gorunur ");
+            logger.info("( " + key + " ) elementi gorunur ");
             webDriver.quit();
         } else {
-            System.out.println("( " + key + ") elementinin sayfada gorunur olmadigi onaylandi ");
-            logger.info("( " + key + ") elementinin sayfada gorunur olmadigi onaylandi ");
+            System.out.println("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
+            logger.info("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
         }
 
     }
@@ -255,6 +263,15 @@ public class StepImplementation extends Driver {
 
     }
 
+    @Step("<key> elementinin üzerine klavyeden enter tuşuna tıkla")
+    public void clickEnter(String key) {
+
+        webDriver.findElement(methods.getBy(key)).sendKeys(Keys.ENTER);
+        System.out.println("( " + key + " ) elementinin uzerine klavyeden enter tusuna tıklandi.");
+        logger.info("( " + key + " ) elementinin uzerine klavyeden enter tusuna tıklandi");
+
+    }
+
     @Step("<url> url adresine git")
     public void navigateTo (String url) {
 
@@ -321,6 +338,24 @@ public class StepImplementation extends Driver {
 
     }
 
+    @Step("Ekrandaki Alert Popuptaki Cancel butonuna tıkla")
+    public void alertCancel(){
+
+        methods.clickAlertCancelButton();
+        System.out.println("Alert 'Cancel' butonuna tiklandi.");
+        logger.info("Alert 'Cancel' butonuna tiklandi.");
+
+    }
+
+    @Step("Ekrandaki Alert Popuptaki OK butonuna tıkla")
+    public void alertOK(){
+
+        methods.clickAlertOkButton();
+        System.out.println("Alert 'OK' butonuna tiklandi.");
+        logger.info("Alert 'OK' butonuna tiklandi.");
+
+    }
+
     @Step("Delete All Cookies")
     public void deleteAllCookies(){
 
@@ -346,6 +381,61 @@ public class StepImplementation extends Driver {
         methods.randomClickElement(key);
         System.out.println("( " + key + " ) listesindeki elementlerden birine random tiklandi.");
         logger.info("( " + key + " ) listesindeki elementlerden birine random tiklandi.");
+
+    }
+
+    @Step("Bilet bulma ekranındaki yolculuk tarihi alanından rastgele tarih seç")
+    public void selectDayFromCalendar(){
+
+        Random rand = new Random();
+
+        //Disabled olan günleri içine yazdırdığımız liste
+        List<String> listDisabled = new ArrayList<>();
+        //Enabled olan günleri içine yazdırdığımız liste
+        List<String> listEnabled = new ArrayList<>();
+
+        //Takimdeki tüm sonuçların listesi
+        List<WebElement> items = webDriver.findElements(By.xpath("//table[@class='month']//tbody//button"));
+
+        //Takvimdeki aktif hafta içi ve hafta sonu günlerinin listeleri
+        List<WebElement> weekIn = webDriver.findElements(By.xpath("//table[@class='month']//tbody//button[@class='week in']"));
+        List<WebElement> weekendIn = webDriver.findElements(By.xpath("//table[@class='month']//tbody//button[@class='weekend in']"));
+
+        //Takvimdeki aktif olmayan hafta içi ve hafta sonu günlerinin listeleri
+        List<WebElement> weekOut = webDriver.findElements(By.cssSelector(".week.out.out-prev"));
+        List<WebElement> weekendOut = webDriver.findElements(By.cssSelector(".weekend.out.out-prev"));
+
+        //Takvimdeki aktif olmayan tüm günlerin listesi
+        List<WebElement> disabledList = webDriver.findElements(By.xpath("//table[@class='month']//tbody//button[@disabled]"));
+
+        //Takvimde bir önceki aydan görünen günler toplamı
+        int prevSize = weekOut.size() + weekendOut.size();
+
+        //Takvimdeki bu aya ait hafta içi ve hafta sonu günlerinin birleşimi
+        weekIn.addAll(weekendIn);
+        int size = weekIn.size();
+
+
+        for ( int i = 0 ; i < ( prevSize + size ) ; i++ ) {
+            WebElement element = items.get(i);
+            String elementAttribute = element.getAttribute("data-date");
+            if ( disabledList.size() > i ){
+                listDisabled.add(elementAttribute);
+            } else {
+                listEnabled.add(elementAttribute);
+            }
+        }
+
+        //System.out.println("listEnabled : " + listEnabled);
+        //System.out.println("listDisabled : " + listDisabled);
+
+        String randomElement = listEnabled.get(rand.nextInt(listEnabled.size()));
+        String newLocator = "//table[@class='month']//tbody//button[@data-date='" + randomElement + "']";
+        WebElement clickRandomElement = webDriver.findElement(By.xpath(newLocator));
+        methods.clickElement(clickRandomElement);
+
+        System.out.println("Takvimden ( " + randomElement + " ) tarihi secildi.");
+        logger.info("Takvimden ( " + randomElement + " ) tarihi secildi.");
 
     }
 
