@@ -9,13 +9,11 @@
 # Obilet - <kalkısNoktası> kalkış noktası seçilir
 * "ObiletKalkisNoktasiTextBox" elementine <kalkısNoktası> değerini yaz
 * "ObiletManisaSelect" elementinin görünür olması kontrol edilir
-* "500" milisaniye bekle
 * "ObiletManisaSelect" elementine tıklanır
 
 # Obilet - <varisNoktası> varış noktası seçilir
 * "ObiletVarisNoktasiTextBox" elementine <varisNoktası> değerini yaz
 * "ObiletIstanbulAvrupaSelect" elementinin görünür olması kontrol edilir
-* "500" milisaniye bekle
 * "ObiletIstanbulAvrupaSelect" elementine tıklanır
 
 # Obilet - Yolculuk Tarihi textine tıklanır ve açılan takvimden rastgele bir gün seçilir
@@ -26,3 +24,39 @@
 
 # Obilet - Otobüs Bileti Bul butonuna tıklanır
 * "ObiletOtobusBiletiBulBtn" elementine tıklanır
+
+# Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
+* "ObiletBusImage" elementinin sayfada görünür olmadığı kontrol edilir
+* "ObiletOtobüsSeferListesi" elementinin görünür olması kontrol edilir
+* "ObiletOtobüsSeferListesi" elementlerinden birine random tıkla
+
+# Obilet - Otobüs boş koltuk erkek seçimi yapılır
+* Otobüs boş koltuk erkek seçimi yapılır
+* "ObiletOtobusBosKoltukCinsiyetSecimiErkek" elementinin sayfada görünür olmadığı kontrol edilir
+* "ObiletOtobüsOnaylaveDevamEtBtn" elementine tıklanır
+
+# Obilet - Otobüs bilet satın alma işlemlerinde email alanına <email> texti girilir
+* "ObiletContactInformationEmailTextBox" elementine <email> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde phone alanına <phone> texti girilir
+* "ObiletContactInformationPhoneTextBox" elementine <phone> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde Ad Soyad alanına <nameAndSurname> texti girilir
+* "ObiletPassengerInformationNameAndSurnameTextBox" elementine <nameAndSurname> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde TC Kimlik No alanına <tcKimlikNo> texti girilir
+* "ObiletPassengerInformationTCKimlikNoTextBox" elementine <tcKimlikNo> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde kart numarası alanına <cardNumber> texti girilir
+* "ObiletPaymentInformationCardNumberTextBox" elementine <cardNumber> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde son kullanma tarihi alanına <cardExpiration> texti girilir
+* "ObiletPaymentInformationCardExpirationTextBox" elementine <cardExpiration> değerini yaz
+
+# Obilet - Otobüs bilet satın alma işlemlerinde CVC alanına <cvc> texti girilir
+* "ObiletPaymentInformationCardCVCTextBox" elementine <cvc> değerini yaz
+
+# Obilet - Otobüs bileti satın al butonuna tıklanır
+* "ObiletOtobüsBiletSatınAlBtn" elementine tıklanır
+
+

@@ -67,6 +67,62 @@
   "ObiletYolculukTarihiTakvim": {
     "value": "div[data-month]",
     "type": "cssSelector"
+  },
+  "ObiletOtobüsSeferListesi": {
+    "value": "ul#list li.journey",
+    "type": "cssSelector"
+  },
+  "ObiletBusImage": {
+    "value": "img[alt='bus']",
+    "type": "cssSelector"
+  },
+  "ObiletOtobüsSeferiBusLayout": {
+    "value": "svg[class='bus-layout']",
+    "type": "cssSelector"
+  },
+  "ObiletOtobüsBosKoltuk": {
+    "value": ".available.active",
+    "type": "cssSelector"
+  },
+  "ObiletOtobusBosKoltukCinsiyetSecimiErkek": {
+    "value": "div[class='drop-content'] button[class='male ']",
+    "type": "cssSelector"
+  },
+  "ObiletOtobüsOnaylaveDevamEtBtn": {
+    "value": "span[class='ready']",
+    "type": "cssSelector"
+  },
+  "ObiletContactInformationEmailTextBox": {
+    "value": "#email",
+    "type": "cssSelector"
+  },
+  "ObiletContactInformationPhoneTextBox": {
+    "value": "input#phone",
+    "type": "cssSelector"
+  },
+  "ObiletPassengerInformationNameAndSurnameTextBox": {
+    "value": "div[class='name group'] .input-group input",
+    "type": "cssSelector"
+  },
+  "ObiletPassengerInformationTCKimlikNoTextBox": {
+    "value": "div[class='gov-id group'] .input-group input",
+    "type": "cssSelector"
+  },
+  "ObiletPaymentInformationCardNumberTextBox": {
+    "value": "card-number",
+    "type": "id"
+  },
+  "ObiletPaymentInformationCardExpirationTextBox": {
+    "value": "input#card-expiration",
+    "type": "cssSelector"
+  },
+  "ObiletPaymentInformationCardCVCTextBox": {
+    "value": "input#card-csc",
+    "type": "cssSelector"
+  },
+  "ObiletOtobüsBiletSatınAlBtn": {
+    "value": "button#pay",
+    "type": "cssSelector"
   }
 
 }

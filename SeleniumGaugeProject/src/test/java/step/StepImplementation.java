@@ -91,24 +91,34 @@ public class StepImplementation extends Driver {
     @Step("<key> elementinin sayfada görünür olmadığı kontrol edilir")
     public void checkElementVisible(String key){
 
-        List<WebElement> elements = webDriver.findElements(methods.getBy(key));
-        int elementSize = elements.size();
+        int counter = 0;
+        boolean element = false;
 
-        if(elementSize > 0) {
-            System.out.println("( " + key + " ) elementi gorunur ");
-            logger.info("( " + key + " ) elementi gorunur ");
-            webDriver.quit();
-        } else {
-            System.out.println("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
-            logger.info("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
+        while( counter != 3 || element == false ){
+
+            counter++;
+            List<WebElement> elements = webDriver.findElements(methods.getBy(key));
+            int elementSize = elements.size();
+
+            if(elementSize > 0 && counter == 3) {
+                System.out.println("( " + key + " ) elementi gorunur ");
+                logger.info("( " + key + " ) elementi gorunur ");
+                webDriver.quit();
+            } else {
+                System.out.println("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
+                logger.info("( " + key + " ) elementinin sayfada gorunur olmadigi onaylandi ");
+                element = true; counter = 3;
+            }
+
         }
 
     }
 
     @Step("<key> elementinin görünür olması kontrol edilir")
-    public void checkVisibleElement(String key) {
+    public Boolean checkVisibleElement(String key) {
 
-        WebDriverWait wait = new WebDriverWait(webDriver, 10);
+        Boolean bln = null;
+        WebDriverWait wait = new WebDriverWait(webDriver, 3);
         WebElement element = webDriver.findElement(methods.getBy(key));
         By locator = methods.getBy(key);
 
@@ -119,14 +129,18 @@ public class StepImplementation extends Driver {
             if (element != null && element.isDisplayed()){
                 System.out.println("( " + key + " ) elementi sayfada goruntulendi");
                 logger.info("( " + key + " ) elementi sayfada goruntulendi");
+                bln = true;
             }
 
         } catch (Exception e) {
             System.out.println("( " + key + " ) elementi sayfada goruntulenemedi");
             logger.info("( " + key + " ) elementi sayfada goruntulenemedi");
             e.printStackTrace();
+            bln = false;
         }
 
+        waitByMilliSeconds(300);
+        return bln;
     }
 
     @Step("<key> elementine scroll yapılır")
@@ -436,6 +450,31 @@ public class StepImplementation extends Driver {
 
         System.out.println("Takvimden ( " + randomElement + " ) tarihi secildi.");
         logger.info("Takvimden ( " + randomElement + " ) tarihi secildi.");
+
+    }
+
+    @Step("Otobüs boş koltuk erkek seçimi yapılır")
+    public void busSeatMaleSelection(){
+
+        Boolean bln = null;
+        while( bln == null || bln == false ) {
+
+            bln = checkVisibleElement("ObiletOtobüsSeferiBusLayout");
+            if ( bln == true ) {
+                Boolean freeSeat = checkVisibleElement("ObiletOtobüsBosKoltuk");
+                if ( freeSeat == true ){
+                    randomClick("ObiletOtobüsBosKoltuk");
+                    checkVisibleElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
+                    clickElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
+                    bln = true;
+                } else {
+                    System.out.println("Bos koltuk yok.");
+                }
+            } else {
+                System.out.println("Otobüs Layout goruntulenemedi. Yeni sefer seçiliyor.");
+            }
+
+        }
 
     }
 
