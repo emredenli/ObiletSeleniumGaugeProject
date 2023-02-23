@@ -33,6 +33,8 @@
 # Obilet - Otobüs boş koltuk erkek seçimi yapılır
 * Otobüs boş koltuk erkek seçimi yapılır
 * "ObiletOtobusBosKoltukCinsiyetSecimiErkek" elementinin sayfada görünür olmadığı kontrol edilir
+
+# Obilet - Onayla ve Devam Et Butonuna tıklanır
 * "ObiletOtobüsOnaylaveDevamEtBtn" elementine tıklanır
 
 # Obilet - Otobüs bilet satın alma işlemlerinde email alanına <email> texti girilir
@@ -58,5 +60,9 @@
 
 # Obilet - Otobüs bileti satın al butonuna tıklanır
 * "ObiletOtobüsBiletSatınAlBtn" elementine tıklanır
+
+# Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
+* "ObiletOtobüsSeçtiğinizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
+* "ObiletOtobüsSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi
 
 

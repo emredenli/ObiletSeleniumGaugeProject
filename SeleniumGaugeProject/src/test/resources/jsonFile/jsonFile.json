@@ -124,8 +124,12 @@
     "value": "button#pay",
     "type": "cssSelector"
   },
-  "denemeText": {
-    "value": "button#search-button",
+  "ObiletOtobüsSecilenKoltukText": {
+    "value": "a.selected text",
+    "type": "cssSelector"
+  },
+  "ObiletOtobüsSeçtiğinizKoltuklarText": {
+    "value": "div[class='seats'] ul li img",
     "type": "cssSelector"
   }
 

@@ -11,6 +11,8 @@ Obilet - Otobüs bileti satın alma
 * Obilet - Otobüs Bileti Bul butonuna tıklanır
 * Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
 * Obilet - Otobüs boş koltuk erkek seçimi yapılır
+* Obilet - Onayla ve Devam Et Butonuna tıklanır
+* Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
 * Obilet - Otobüs bilet satın alma işlemlerinde email alanına "ta3320594@gmail.com" texti girilir
 * Obilet - Otobüs bilet satın alma işlemlerinde phone alanına "5555555555" texti girilir
 * Obilet - Otobüs bilet satın alma işlemlerinde Ad Soyad alanına "Test Account" texti girilir
@@ -24,5 +26,15 @@ Obilet - Otobüs bileti satın alma
 deneme
 ------
 * Obilet - Aydınlatma Metni PopUp'ı kapatılır
-* "denemeText" elementinin text değerini "text" keyinde tut
-* "denemeText" elementinin text değeriyle "text" 'deki elementin text değeri eşit mi
+* "ObiletKalkisNoktasiTextBox" elementine "Manisa" değerini yaz
+* "ObiletManisaSelect" elementinin görünür olması kontrol edilir
+* "ObiletManisaSelect" elementine tıklanır
+* "ObiletVarisNoktasiTextBox" elementine "İstanbul Avrupa" değerini yaz
+* "ObiletIstanbulAvrupaSelect" elementinin görünür olması kontrol edilir
+* "ObiletIstanbulAvrupaSelect" elementine tıklanır
+* "ObiletOtobusBiletiBulBtn" elementine tıklanır
+* "3" saniye bekle
+* Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
+* Otobüs boş koltuk erkek seçimi yapılır
+* "ObiletOtobüsSeçtiğinizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
+* "ObiletOtobüsSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi

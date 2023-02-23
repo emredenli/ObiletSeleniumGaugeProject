@@ -317,8 +317,6 @@ public class StepImplementation extends Driver {
     @Step("<key> elementinin text değerini <mapKey> keyinde tut")
     public void getElementTextAndSave(String key, String mapKey){
 
-        //String text = methods.getText(methods.getBy(key));
-        //HashMap<String, String> map = new HashMap<>();
         String text = (webDriver.findElement(methods.getBy(key))).getText();
         //text = trim ? text.trim() : text;
         text = true ? text.trim() : text;
@@ -345,8 +343,11 @@ public class StepImplementation extends Driver {
                 System.out.println("( " + key + " ) elementinin text degeri : " + text);
                 System.out.println("( " + mapKey + " ) Key'inin text degeri : " + mpKy);
                 System.out.println("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) Key'inin text degeri birbirine esit.");
+                logger.info("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) Key'inin text degeri birbirine esit.");
             } else {
                 System.out.println("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) elementinin text degeri birbirine esit degil!");
+                logger.info("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) elementinin text degeri birbirine esit degil!");
+                webDriver.quit();
             }
         } else {
             System.out.println("( " + mapKey + " ) ilgili mapKeyde element bulunamadi.");
@@ -357,7 +358,6 @@ public class StepImplementation extends Driver {
     @Step("<key> elementinin <attribute> attribute değerini <mapKey> keyinde tut")
     public void getElementAttributeAndSave(String key, String attribute, String mapKey){
 
-        HashMap<String, String> map = new HashMap<>();
         String value = (webDriver.findElement(methods.getBy(key))).getAttribute(attribute);
         value = true ? value.trim() : value;
         logger.info(value);
