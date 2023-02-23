@@ -20,3 +20,9 @@ Obilet - Otobüs bileti satın alma
 * Obilet - Otobüs bilet satın alma işlemlerinde CVC alanına "650" texti girilir
 * Obilet - Otobüs bileti satın al butonuna tıklanır
 * "5" saniye bekle
+
+deneme
+------
+* Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* "denemeText" elementinin text değerini "text" keyinde tut
+* "denemeText" elementinin text değeriyle "text" 'deki elementin text değeri eşit mi

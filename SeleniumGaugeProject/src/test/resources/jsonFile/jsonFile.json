@@ -123,6 +123,10 @@
   "ObiletOtobüsBiletSatınAlBtn": {
     "value": "button#pay",
     "type": "cssSelector"
+  },
+  "denemeText": {
+    "value": "button#search-button",
+    "type": "cssSelector"
   }
 
 }

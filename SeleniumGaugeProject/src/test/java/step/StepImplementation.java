@@ -24,6 +24,7 @@ public class StepImplementation extends Driver {
 
     Methods methods;
     Logger logger = LogManager.getLogger(Methods.class);
+    HashMap<String, String> map = new HashMap<>();
 
     public StepImplementation (){
 
@@ -317,7 +318,7 @@ public class StepImplementation extends Driver {
     public void getElementTextAndSave(String key, String mapKey){
 
         //String text = methods.getText(methods.getBy(key));
-        HashMap<String, String> map = new HashMap<>();
+        //HashMap<String, String> map = new HashMap<>();
         String text = (webDriver.findElement(methods.getBy(key))).getText();
         //text = trim ? text.trim() : text;
         text = true ? text.trim() : text;
@@ -330,6 +331,26 @@ public class StepImplementation extends Driver {
             String str = map.get(mapKey);
             System.out.println("value for key " + mapKey + " is:- " + str);
         }*/
+    }
+
+    @Step("<key> elementinin text değeriyle <mapKey> 'deki elementin text değeri eşit mi")
+    public void compareTextsElement(String key, String mapKey){
+
+        String text = (webDriver.findElement(methods.getBy(key))).getText();
+        text = true ? text.trim() : text;
+
+        if (map.containsKey(mapKey)) {
+            String mpKy = map.get(mapKey);
+            if ( text.equals(mpKy)) {
+                System.out.println("( " + key + " ) elementinin text degeri : " + text);
+                System.out.println("( " + mapKey + " ) Key'inin text degeri : " + mpKy);
+                System.out.println("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) Key'inin text degeri birbirine esit.");
+            } else {
+                System.out.println("( " + key + " ) elementinin text degeriyle ( " + mapKey + " ) elementinin text degeri birbirine esit degil!");
+            }
+        } else {
+            System.out.println("( " + mapKey + " ) ilgili mapKeyde element bulunamadi.");
+        }
 
     }
 
