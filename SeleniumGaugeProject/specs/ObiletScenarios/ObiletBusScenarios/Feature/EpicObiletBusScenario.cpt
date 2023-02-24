@@ -32,6 +32,7 @@
 
 # Obilet - Otobüs boş koltuk erkek seçimi yapılır
 * Otobüs boş koltuk erkek seçimi yapılır
+* "ObiletSecilenOtobusunFirmaAdı" elementinin "data-name" attribute değerini "Secilen_Otobusun_Firma_Adi" keyinde tut
 * "ObiletOtobusBosKoltukCinsiyetSecimiErkek" elementinin sayfada görünür olmadığı kontrol edilir
 
 # Obilet - Onayla ve Devam Et Butonuna tıklanır
@@ -67,5 +68,8 @@
 
 # Obilet - Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi kontrol edilir
 * Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi
+
+# Obilet - Sefer listesinden seçilen otobüsün firma adı ile satın alma ekranındaki firma adı aynı mı kontrol edilir
+* "ObiletOdemeEkranıSecilenOtobusunFirmaAdı" elementinin text değeriyle "Secilen_Otobusun_Firma_Adi" 'deki elementin text değeri eşit mi
 
 

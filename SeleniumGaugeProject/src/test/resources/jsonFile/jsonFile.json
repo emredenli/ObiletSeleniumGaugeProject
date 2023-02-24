@@ -135,6 +135,14 @@
   "ObiletOtobusOdemeEkraniKoltukNumarasiText": {
     "value": "(//div[@class='intro-table']//table//tbody//tr)[4]//div[@class='seats']",
     "type": "xpath"
+  },
+  "ObiletSecilenOtobusunFirmaAdı": {
+    "value": "li.journey.item.open div[class='partner col'] div",
+    "type": "cssSelector"
+  },
+  "ObiletOdemeEkranıSecilenOtobusunFirmaAdı": {
+    "value": "div[class='partner-name'] p",
+    "type": "cssSelector"
   }
 
 }

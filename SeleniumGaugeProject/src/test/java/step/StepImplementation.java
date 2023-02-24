@@ -362,9 +362,9 @@ public class StepImplementation extends Driver {
         value = true ? value.trim() : value;
         logger.info(value);
         map.put(mapKey, value);
-        System.out.println("( " + key + " ) elementinin attribute degeri " + mapKey + " keyine kaydedildi.");
+        System.out.println("( " + key + " ) elementinin attribute degeri ( " + mapKey + " ) keyine kaydedildi.");
         System.out.println("( " + key + " ) elementinin attribute degeri : " + attribute);
-        logger.info("( " + key + " ) elementinin attribute degeri " + mapKey + " keyine kaydedildi.");
+        logger.info("( " + key + " ) elementinin attribute degeri ( " + mapKey + " ) keyine kaydedildi.");
 
         /*if (map.containsKey(mapKey)) {
             String str = map.get(mapKey);
