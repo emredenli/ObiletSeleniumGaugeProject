@@ -27,15 +27,15 @@
 
 # Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
 * "ObiletBusImage" elementinin sayfada görünür olmadığı kontrol edilir
-* "ObiletOtobüsSeferListesi" elementinin görünür olması kontrol edilir
-* "ObiletOtobüsSeferListesi" elementlerinden birine random tıkla
+* "ObiletOtobusSeferListesi" elementinin görünür olması kontrol edilir
+* "ObiletOtobusSeferListesi" elementlerinden birine random tıkla
 
 # Obilet - Otobüs boş koltuk erkek seçimi yapılır
 * Otobüs boş koltuk erkek seçimi yapılır
 * "ObiletOtobusBosKoltukCinsiyetSecimiErkek" elementinin sayfada görünür olmadığı kontrol edilir
 
 # Obilet - Onayla ve Devam Et Butonuna tıklanır
-* "ObiletOtobüsOnaylaveDevamEtBtn" elementine tıklanır
+* "ObiletOtobusOnaylaveDevamEtBtn" elementine tıklanır
 
 # Obilet - Otobüs bilet satın alma işlemlerinde email alanına <email> texti girilir
 * "ObiletContactInformationEmailTextBox" elementine <email> değerini yaz
@@ -62,7 +62,10 @@
 * "ObiletOtobüsBiletSatınAlBtn" elementine tıklanır
 
 # Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
-* "ObiletOtobüsSeçtiğinizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
-* "ObiletOtobüsSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi
+* "ObiletOtobusSectiginizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
+* "ObiletOtobusSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi
+
+# Obilet - Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi kontrol edilir
+* Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi
 
 

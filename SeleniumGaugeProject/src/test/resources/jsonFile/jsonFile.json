@@ -68,7 +68,7 @@
     "value": "div[data-month]",
     "type": "cssSelector"
   },
-  "ObiletOtobüsSeferListesi": {
+  "ObiletOtobusSeferListesi": {
     "value": "ul#list li.journey",
     "type": "cssSelector"
   },
@@ -76,11 +76,11 @@
     "value": "img[alt='bus']",
     "type": "cssSelector"
   },
-  "ObiletOtobüsSeferiBusLayout": {
+  "ObiletOtobusSeferiBusLayout": {
     "value": "svg[class='bus-layout']",
     "type": "cssSelector"
   },
-  "ObiletOtobüsBosKoltuk": {
+  "ObiletOtobusBosKoltuk": {
     "value": ".available.active",
     "type": "cssSelector"
   },
@@ -88,7 +88,7 @@
     "value": "div[class='drop-content'] button[class='male ']",
     "type": "cssSelector"
   },
-  "ObiletOtobüsOnaylaveDevamEtBtn": {
+  "ObiletOtobusOnaylaveDevamEtBtn": {
     "value": "span[class='ready']",
     "type": "cssSelector"
   },
@@ -124,12 +124,16 @@
     "value": "button#pay",
     "type": "cssSelector"
   },
-  "ObiletOtobüsSecilenKoltukText": {
+  "ObiletOtobusSecilenKoltukText": {
     "value": "a.selected text",
     "type": "cssSelector"
   },
-  "ObiletOtobüsSeçtiğinizKoltuklarText": {
+  "ObiletOtobusSectiginizKoltuklarText": {
     "value": "div[class='seats'] ul li img",
+    "type": "cssSelector"
+  },
+  "ObiletOtobusOdemeEkraniKoltukNumarasiText": {
+    "value": "div[class='seats']",
     "type": "cssSelector"
   }
 

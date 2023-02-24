@@ -353,4 +353,14 @@ public class Methods {
 
     }
 
+    public String textSpaceDelete(String key) {
+
+        //System.out.println("key : " + key);
+        key = key.replace(" ", "");
+        //System.out.println("newKey : " + key);
+
+        return key;
+
+    }
+
 }

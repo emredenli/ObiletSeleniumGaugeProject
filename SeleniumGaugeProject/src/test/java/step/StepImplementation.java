@@ -480,11 +480,11 @@ public class StepImplementation extends Driver {
         Boolean bln = null;
         while( bln == null || bln == false ) {
 
-            bln = checkVisibleElement("ObiletOtobüsSeferiBusLayout");
+            bln = checkVisibleElement("ObiletOtobusSeferiBusLayout");
             if ( bln == true ) {
-                Boolean freeSeat = checkVisibleElement("ObiletOtobüsBosKoltuk");
+                Boolean freeSeat = checkVisibleElement("ObiletOtobusBosKoltuk");
                 if ( freeSeat == true ){
-                    randomClick("ObiletOtobüsBosKoltuk");
+                    randomClick("ObiletOtobusBosKoltuk");
                     checkVisibleElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
                     clickElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
                     bln = true;
@@ -495,6 +495,27 @@ public class StepImplementation extends Driver {
                 System.out.println("Otobüs Layout goruntulenemedi. Yeni sefer seçiliyor.");
             }
 
+        }
+
+    }
+
+    @Step("Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi")
+    public void seatNumberCompare(){
+
+        methods.waitByMilliSeconds(100);
+        String selectSeatNumber = map.get("Secilen_Koltuklar");
+        checkVisibleElement("ObiletOtobusOdemeEkraniKoltukNumarasiText");
+        String paymentScreenSeatNumber
+                = webDriver.findElement(methods.getBy("ObiletOtobusOdemeEkraniKoltukNumarasiText")).getText();
+        paymentScreenSeatNumber = methods.textSpaceDelete(paymentScreenSeatNumber);
+
+        if ( selectSeatNumber.equals(paymentScreenSeatNumber) ) {
+            System.out.println("selectSeatNumber : " + selectSeatNumber);
+            System.out.println("paymentScreenSeatNumber : " + paymentScreenSeatNumber);
+            System.out.println("Sefer secim ekraninda secilen seferdeki koltuk numarasi ile odeme ekranindaki koltuk numarasi esit.");
+        } else {
+            System.out.println("Sefer secim ekraninda secilen seferdeki koltuk numarasi ile odeme ekranindaki koltuk numarasi esit degil!");
+            webDriver.quit();
         }
 
     }
