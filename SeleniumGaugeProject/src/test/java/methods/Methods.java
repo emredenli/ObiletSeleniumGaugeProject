@@ -355,11 +355,11 @@ public class Methods {
 
     public String textSpaceDelete(String key) {
 
-        //System.out.println("key : " + key);
-        key = key.replace(" ", "");
-        //System.out.println("newKey : " + key);
+        String newKey = null;
+        newKey = key.replace(" ", "");
+        //System.out.println("key : " + key + " / " + "newKey : " + newKey);
 
-        return key;
+        return newKey;
 
     }
 

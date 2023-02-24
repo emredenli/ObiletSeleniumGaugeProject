@@ -18,10 +18,10 @@ public class Driver {
     public static ConcurrentHashMap<String,Object> TestMap;
 
     @BeforeScenario
-    public void setUp() {
+    public void setUp(ExecutionContext executionContext) {
 
         System.out.println("==========================================================================================================================================");
-        System.out.println("----------------------------------------------------------ObiletAutomationTest------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------- ObiletAutomationTest -----------------------------------------------------------");
         System.out.println("==========================================================================================================================================");
 
         DesiredCapabilities capabilities;
@@ -43,10 +43,29 @@ public class Driver {
         webDriver.manage().window().maximize();
         webDriver.get(ProjectConsts.PLATFORM_URL);
 
+        System.out.println("\r\n");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------");
+        String specName = ( executionContext.getCurrentSpecification().getName() );
+        System.out.println("----------------------------------------------Spec Name : " + specName);
+        String scenarioName = ( executionContext.getCurrentScenario().getName() );
+        System.out.println("----------------------------------------------Scenario Name : " + scenarioName);
+        System.out.println("\r\n");
+
     }
 
     @AfterScenario
-    public void tearDown() {
+    public void tearDown(ExecutionContext executionContext) {
+
+        if (executionContext.getCurrentScenario().getIsFailing()) {
+
+            System.out.println("---------------------------------------------------------  TEST BASARISIZ ------------------------------------------------------------- ");
+        } else {
+
+            System.out.println("-------------------------------------------------------------  TEST BASARILI ------------------------------------------------------------- ");
+        }
+
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("\r\n");
 
         if (webDriver != null) {
             webDriver.close();

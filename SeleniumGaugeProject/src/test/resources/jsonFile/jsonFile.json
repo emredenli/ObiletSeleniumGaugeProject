@@ -133,8 +133,8 @@
     "type": "cssSelector"
   },
   "ObiletOtobusOdemeEkraniKoltukNumarasiText": {
-    "value": "div[class='seats']",
-    "type": "cssSelector"
+    "value": "(//div[@class='intro-table']//table//tbody//tr)[4]//div[@class='seats']",
+    "type": "xpath"
   }
 
 }

@@ -1,5 +1,5 @@
-Epic - Obilet
-===============
+Epic - ObiletBusScenario
+=========================
 
 Obilet - Otobus bileti satin alma
 -----------------------------------
