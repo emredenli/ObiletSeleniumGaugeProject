@@ -143,6 +143,10 @@
   "ObiletOdemeEkranıSecilenOtobusunFirmaAdı": {
     "value": "div[class='partner-name'] p",
     "type": "cssSelector"
+  },
+  "ObiletOdemeEkraniOtobusKoltukFiyatText": {
+    "value": "div#amount",
+    "type": "cssSelector"
   }
 
 }

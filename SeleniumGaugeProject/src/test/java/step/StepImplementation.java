@@ -520,4 +520,17 @@ public class StepImplementation extends Driver {
 
     }
 
+    @Step("Sefer seçim ekranında seçilen seferdeki fiyatı doğru formata getir ve <mapKey> keyinde sakla")
+    public void priceFormatConversion(String mapKey){
+
+        methods.waitByMilliSeconds(100);
+        String amountInteger = webDriver.findElement(By.cssSelector("li.open span[class='amount-integer']")).getText();
+        String amountDecimal = webDriver.findElement(By.cssSelector("li.open sup[class='amount-decimal']")).getText();
+        String amountSign = webDriver.findElement(By.cssSelector("li.open span[class='amount-sign']")).getText();
+        String price = amountInteger + amountDecimal + amountSign;
+        map.put(price,mapKey);
+        //System.out.println("Secilen koltugun fiyat texti : " + price + " ( " + mapKey + " ) keyinde saklandi.");
+
+    }
+
 }

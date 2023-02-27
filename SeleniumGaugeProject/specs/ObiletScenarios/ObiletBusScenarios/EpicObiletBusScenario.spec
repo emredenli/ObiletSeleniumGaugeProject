@@ -15,6 +15,7 @@ Obilet - Otobus bileti satin alma
 * Obilet - Onayla ve Devam Et Butonuna tıklanır
 * Obilet - Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi kontrol edilir
 * Obilet - Sefer listesinden seçilen otobüsün firma adı ile satın alma ekranındaki firma adı aynı mı kontrol edilir
+* Obilet - Sefer seçim ekranında seçilen seferdeki fiyat ile ödeme ekranındaki fiyat eşit mi kontrol edilir
 * Obilet - Otobüs bilet satın alma işlemlerinde email alanına "ta3320594@gmail.com" texti girilir
 * Obilet - Otobüs bilet satın alma işlemlerinde phone alanına "5555555555" texti girilir
 * Obilet - Otobüs bilet satın alma işlemlerinde Ad Soyad alanına "Test Account" texti girilir
