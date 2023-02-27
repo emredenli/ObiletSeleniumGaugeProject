@@ -61,7 +61,7 @@
 * "ObiletPaymentInformationCardCVCTextBox" elementine <cvc> değerini yaz
 
 # Obilet - Otobüs bileti satın al butonuna tıklanır
-* "ObiletOtobüsBiletSatınAlBtn" elementine tıklanır
+* "ObiletOtobusBiletSatinAlBtn" elementine tıklanır
 
 # Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
 * "ObiletOtobusSectiginizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut

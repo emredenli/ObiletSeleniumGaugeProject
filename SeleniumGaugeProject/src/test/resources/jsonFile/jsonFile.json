@@ -120,7 +120,7 @@
     "value": "input#card-csc",
     "type": "cssSelector"
   },
-  "ObiletOtobüsBiletSatınAlBtn": {
+  "ObiletOtobusBiletSatinAlBtn": {
     "value": "button#pay",
     "type": "cssSelector"
   },

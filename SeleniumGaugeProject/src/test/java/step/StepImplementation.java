@@ -527,9 +527,10 @@ public class StepImplementation extends Driver {
         String amountInteger = webDriver.findElement(By.cssSelector("li.open span[class='amount-integer']")).getText();
         String amountDecimal = webDriver.findElement(By.cssSelector("li.open sup[class='amount-decimal']")).getText();
         String amountSign = webDriver.findElement(By.cssSelector("li.open span[class='amount-sign']")).getText();
-        String price = amountInteger + amountDecimal + amountSign;
-        map.put(price,mapKey);
-        //System.out.println("Secilen koltugun fiyat texti : " + price + " ( " + mapKey + " ) keyinde saklandi.");
+        String price = amountInteger + amountDecimal + " " + amountSign;
+        map.put(mapKey, price);
+        System.out.println("Secilen koltugun fiyat texti : " + price + " ( " + mapKey + " ) keyinde saklandi.");
+        logger.info("Secilen koltugun fiyat texti : " + price + " ( " + mapKey + " ) keyinde saklandi.");
 
     }
 
