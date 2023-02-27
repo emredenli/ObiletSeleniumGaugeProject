@@ -16,8 +16,11 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static helpers.ProjectConsts.JSON_FILE_PATH;
+import static org.jsoup.helper.Validate.fail;
 
 public class Methods {
 
@@ -378,6 +381,76 @@ public class Methods {
         } catch (Throwable error) {
             error.printStackTrace();
         }
+    }
+
+    public boolean doesUrl(String url, int count, String condition){
+
+        int againCount = 0;
+        boolean isUrl = false;
+        String takenUrl = "";
+        logger.info("Beklenen url: " + url);
+        while (!isUrl) {
+            waitByMilliSeconds(250);
+            if (againCount == count) {
+                System.err.println("Expected url " + url + " doesn't equal current url " + takenUrl);
+                logger.info("Alınan url: " + takenUrl);
+                return false;
+            }
+            takenUrl = webDriver.getCurrentUrl();
+            if (takenUrl != null) {
+                isUrl = conditionValueControl(url,takenUrl,condition);
+            }
+            againCount++;
+        }
+        logger.info("Alınan url: " + takenUrl);
+        System.out.println("Url kontrolu basarili.");
+        return true;
+    }
+
+    private boolean conditionValueControl(String expectedValue, String actualValue,String condition){
+
+        boolean result = false;
+        switch (condition){
+            case "equal":
+                result = actualValue.equals(expectedValue);
+                break;
+            case "contain":
+                result = actualValue.contains(expectedValue);
+                break;
+            case "startWith":
+                result = actualValue.startsWith(expectedValue);
+                break;
+            case "endWith":
+                result = actualValue.endsWith(expectedValue);
+                break;
+            case "notEqual":
+                result = !actualValue.equals(expectedValue);
+                break;
+            case "notContain":
+                result = !actualValue.contains(expectedValue);
+                break;
+            case "notStartWith":
+                result = !actualValue.startsWith(expectedValue);
+                break;
+            case "notEndWith":
+                result = !actualValue.endsWith(expectedValue);
+                break;
+            default:
+                fail("hatali durum: " + condition);
+        }
+        return result;
+    }
+
+    public String setValueWithMap(String value){
+
+        Matcher matcher3 = Pattern.compile("\\{[A-Za-z0-9_\\-?=.%+$&/()<>|]+\\}").matcher(value);
+        while (matcher3.find()){
+            String t = matcher3.group();
+            value = value.replace(t, Driver.TestMap
+                    .get(t.replace("{","").replace("}","")).toString());
+            System.out.println(t);
+        }
+        return value;
     }
 
 }

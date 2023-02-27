@@ -30,6 +30,8 @@
 
 # Obilet - Otobüs Bileti Bul butonuna tıklanır
 * "ObiletOtobusBiletiBulBtn" elementine tıklanır
+* waitPageLoadCompleteJs
+* Şu anki url "https://www.obilet.com/seferler" ile başlıyor mu
 
 # Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
 * "ObiletBusImage" elementinin sayfada görünür olmadığı kontrol edilir

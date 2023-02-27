@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class StepImplementation extends Driver {
@@ -538,6 +539,38 @@ public class StepImplementation extends Driver {
     public void waitPageLoadCompleteJs(){
 
         methods.waitPageLoadCompleteJs();
+    }
+
+    @Step("Şu anki url <url> içeriyor mu")
+    public void doesUrlContain(String url) {
+
+        url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
+        url = methods.setValueWithMap(url);
+        assertTrue(methods.doesUrl(url, 80, "contain"),"Beklenen url, sayfa url ine eşit değil");
+    }
+
+    @Step("Şu anki url <url> ile başlıyor mu")
+    public void doesUrlStartWith(String url) {
+
+        url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
+        url = methods.setValueWithMap(url);
+        assertTrue(methods.doesUrl(url, 80, "startWith"),"Beklenen url, sayfa url ine eşit değil");
+    }
+
+    @Step("Şu anki url <url> ile sonlanıyor mu")
+    public void doesUrlEndWith(String url) {
+
+        url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
+        url = methods.setValueWithMap(url);
+        assertTrue(methods.doesUrl(url, 80, "endWith"),"Beklenen url, sayfa url ine eşit değil");
+    }
+
+    @Step("Şu anki url <url> ile farklı mı")
+    public void checkUrlDifferent(String url) {
+
+        url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
+        url = methods.setValueWithMap(url);
+        assertTrue(methods.doesUrl(url, 80, "notEqual"),url + " sayfasından başka bir sayfaya geçiş sağlanamadı.");
     }
 
 }
