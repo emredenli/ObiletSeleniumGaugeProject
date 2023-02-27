@@ -4,6 +4,7 @@ import driver.Driver;
 import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -361,6 +362,22 @@ public class Methods {
 
         return newKey;
 
+    }
+
+    public void waitPageLoadCompleteJs() {
+
+        waitPageLoadComplete(setFluentWait(10));
+    }
+
+    public void waitPageLoadComplete(FluentWait<WebDriver> fluentWait) {
+
+        ExpectedCondition<Boolean> expectation = driver -> jsdriver
+                .executeScript("return document.readyState;").toString().equals("complete");
+        try {
+            fluentWait.until(expectation);
+        } catch (Throwable error) {
+            error.printStackTrace();
+        }
     }
 
 }

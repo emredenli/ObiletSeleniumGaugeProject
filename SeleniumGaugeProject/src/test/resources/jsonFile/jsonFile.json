@@ -147,6 +147,10 @@
   "ObiletOdemeEkraniOtobusKoltukFiyatText": {
     "value": "div#amount",
     "type": "cssSelector"
+  },
+  "ObiletBusMenuSelectControl": {
+    "value": "//li[@class=' selected ']//a[@data-event-action='Bus']",
+    "type": "xpath"
   }
 
 }

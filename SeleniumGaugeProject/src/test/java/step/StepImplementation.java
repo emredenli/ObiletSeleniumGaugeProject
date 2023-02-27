@@ -534,4 +534,10 @@ public class StepImplementation extends Driver {
 
     }
 
+    @Step("waitPageLoadCompleteJs")
+    public void waitPageLoadCompleteJs(){
+
+        methods.waitPageLoadCompleteJs();
+    }
+
 }

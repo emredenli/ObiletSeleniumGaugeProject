@@ -1,9 +1,9 @@
 Epic - ObiletBusScenario
 =========================
 
-Obilet - Otobus bileti satin alma
+Obilet - Otobus bileti satin al
 -----------------------------------
-* Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* Obilet - Gelen Url "https://www.obilet.com/" ile aynı mı kontrol edilir
 * Obilet - Anasayfada 'Otobüs' seçim butonuna tıklanır
 * Obilet - "Manisa" kalkış noktası seçilir
 * Obilet - "İstanbul Avrupa" varış noktası seçilir
