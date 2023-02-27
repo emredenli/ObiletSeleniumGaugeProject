@@ -47,6 +47,10 @@
 # Obilet - Onayla ve Devam Et Butonuna tıklanır
 * "ObiletOtobusOnaylaveDevamEtBtn" elementine tıklanır
 
+# Obilet - Ödeme ekranının açıldığı kontrol edilir
+* waitPageLoadCompleteJs
+* Şu anki url "https://www.obilet.com/odeme" ile başlıyor mu
+
 # Obilet - Otobüs bilet satın alma işlemlerinde email alanına <email> texti girilir
 * "ObiletContactInformationEmailTextBox" elementine <email> değerini yaz
 

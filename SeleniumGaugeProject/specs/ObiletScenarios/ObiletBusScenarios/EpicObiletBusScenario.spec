@@ -13,6 +13,7 @@ Obilet - Otobus bileti satin al
 * Obilet - Otobüs boş koltuk erkek seçimi yapılır
 * Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
 * Obilet - Onayla ve Devam Et Butonuna tıklanır
+* Obilet - Ödeme ekranının açıldığı kontrol edilir
 * Obilet - Sefer seçim ekranında seçilen seferdeki koltuk numarası ile ödeme ekranındaki koltuk numarası eşit mi kontrol edilir
 * Obilet - Sefer listesinden seçilen otobüsün firma adı ile satın alma ekranındaki firma adı aynı mı kontrol edilir
 * Obilet - Sefer seçim ekranında seçilen seferdeki fiyat ile ödeme ekranındaki fiyat eşit mi kontrol edilir

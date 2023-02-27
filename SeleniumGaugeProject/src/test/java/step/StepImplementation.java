@@ -546,7 +546,7 @@ public class StepImplementation extends Driver {
 
         url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
         url = methods.setValueWithMap(url);
-        assertTrue(methods.doesUrl(url, 80, "contain"),"Beklenen url, sayfa url ine eşit değil");
+        assertTrue(methods.doesUrl(url, 80, "contain"),"Beklenen url, sayfa url ine esit degil");
     }
 
     @Step("Şu anki url <url> ile başlıyor mu")
@@ -554,7 +554,7 @@ public class StepImplementation extends Driver {
 
         url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
         url = methods.setValueWithMap(url);
-        assertTrue(methods.doesUrl(url, 80, "startWith"),"Beklenen url, sayfa url ine eşit değil");
+        assertTrue(methods.doesUrl(url, 80, "startWith"),"Beklenen url, sayfa url ine esit degil");
     }
 
     @Step("Şu anki url <url> ile sonlanıyor mu")
@@ -562,7 +562,7 @@ public class StepImplementation extends Driver {
 
         url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
         url = methods.setValueWithMap(url);
-        assertTrue(methods.doesUrl(url, 80, "endWith"),"Beklenen url, sayfa url ine eşit değil");
+        assertTrue(methods.doesUrl(url, 80, "endWith"),"Beklenen url, sayfa url ine esit degil");
     }
 
     @Step("Şu anki url <url> ile farklı mı")
@@ -570,7 +570,7 @@ public class StepImplementation extends Driver {
 
         url = url.endsWith("KeyValue") ? Driver.TestMap.get(url).toString() : url;
         url = methods.setValueWithMap(url);
-        assertTrue(methods.doesUrl(url, 80, "notEqual"),url + " sayfasından başka bir sayfaya geçiş sağlanamadı.");
+        assertTrue(methods.doesUrl(url, 80, "notEqual"),url + " sayfasından baska bir sayfaya gecis saglanamadi.");
     }
 
 }
