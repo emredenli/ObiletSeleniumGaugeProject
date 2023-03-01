@@ -475,8 +475,8 @@ public class StepImplementation extends Driver {
 
     }
 
-    @Step("Otobüs boş koltuk erkek seçimi yapılır")
-    public void busSeatMaleSelection(){
+    @Step("Otobüs boş koltuk cinsiyet seçimi yapılır")
+    public void busSeatMaleOrFemaleSelection(){
 
         Boolean bln = null;
         while( bln == null || bln == false ) {

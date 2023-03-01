@@ -38,8 +38,8 @@
 * "ObiletOtobusSeferListesi" elementinin görünür olması kontrol edilir
 * "ObiletOtobusSeferListesi" elementlerinden birine random tıkla
 
-# Obilet - Otobüs boş koltuk erkek seçimi yapılır
-* Otobüs boş koltuk erkek seçimi yapılır
+# Obilet - Otobüs boş koltuk cinsiyet seçimi yapılır
+* Otobüs boş koltuk cinsiyet seçimi yapılır
 * "ObiletSecilenOtobusunFirmaAdı" elementinin "data-name" attribute değerini "Secilen_Otobusun_Firma_Adi" keyinde tut
 * Sefer seçim ekranında seçilen seferdeki fiyatı doğru formata getir ve "Secilen_Koltuk_Fiyat" keyinde sakla
 * "ObiletOtobusBosKoltukCinsiyetSecimiErkek" elementinin sayfada görünür olmadığı kontrol edilir

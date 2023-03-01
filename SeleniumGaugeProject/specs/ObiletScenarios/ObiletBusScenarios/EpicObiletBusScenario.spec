@@ -10,7 +10,7 @@ Obilet - Otobus bileti satin al
 * Obilet - Yolculuk Tarihi textine tıklanır ve açılan takvimden rastgele bir gün seçilir
 * Obilet - Otobüs Bileti Bul butonuna tıklanır
 * Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
-* Obilet - Otobüs boş koltuk erkek seçimi yapılır
+* Obilet - Otobüs boş koltuk cinsiyet seçimi yapılır
 * Obilet - Seçtiğimiz koltuk numarası, 'Seçtiğiniz Koltuklar' alanındaki koltuk numarasına eşit mi kontrol edilir
 * Obilet - Onayla ve Devam Et Butonuna tıklanır
 * Obilet - Ödeme ekranının açıldığı kontrol edilir
@@ -38,6 +38,6 @@ deneme
 * "ObiletOtobusBiletiBulBtn" elementine tıklanır
 * "3" saniye bekle
 * Obilet - Otobüs sefer listesinden rastgele bir sefer seçilir
-* Otobüs boş koltuk erkek seçimi yapılır
+* Otobüs boş koltuk cinsiyet seçimi yapılır
 * "ObiletOtobusSectiginizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
 * "ObiletOtobusSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi

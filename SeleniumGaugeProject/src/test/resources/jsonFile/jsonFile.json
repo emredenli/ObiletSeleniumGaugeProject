@@ -88,6 +88,10 @@
     "value": "div[class='drop-content'] button[class='male ']",
     "type": "cssSelector"
   },
+  "ObiletOtobusBosKoltukCinsiyetSecimiErkekDisabled": {
+    "value": ".male.disabled",
+    "type": "cssSelector"
+  },
   "ObiletOtobusOnaylaveDevamEtBtn": {
     "value": "span[class='ready']",
     "type": "cssSelector"
@@ -151,6 +155,10 @@
   "ObiletBusMenuSelectControl": {
     "value": "//li[@class=' selected ']//a[@data-event-action='Bus']",
     "type": "xpath"
+  },
+  "ObiletOtobusBosKoltukCinsiyetSecimiKadın": {
+    "value": "button[class='female ']",
+    "type": "cssSelector"
   }
 
 }
