@@ -486,8 +486,12 @@ public class StepImplementation extends Driver {
                 Boolean freeSeat = checkVisibleElement("ObiletOtobusBosKoltuk");
                 if ( freeSeat == true ){
                     randomClick("ObiletOtobusBosKoltuk");
-                    checkVisibleElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
-                    clickElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
+                    boolean maleEnableControl = methods.visibleControl("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
+                    if (maleEnableControl == true) {
+                        clickElement("ObiletOtobusBosKoltukCinsiyetSecimiErkek");
+                    } else {
+                        clickElement("ObiletOtobusBosKoltukCinsiyetSecimiKadın");
+                    }
                     bln = true;
                 } else {
                     System.out.println("Bos koltuk yok.");

@@ -5,7 +5,9 @@ import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.By;
@@ -21,6 +23,7 @@ import java.util.regex.Pattern;
 
 import static helpers.ProjectConsts.JSON_FILE_PATH;
 import static org.jsoup.helper.Validate.fail;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Methods {
 
@@ -451,6 +454,22 @@ public class Methods {
             System.out.println(t);
         }
         return value;
+    }
+
+    public Boolean visibleControl(String key) {
+
+        try {
+            List<WebElement> item = webDriver.findElements(getBy(key));
+            if ( item.size() > 0 ){
+                logger.info("true");
+                return true;
+            }
+        } catch (Exception e) {
+            logger.info("false" + " " + e.getMessage());
+            return false;
+        }
+
+        return false;
     }
 
 }
