@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.By;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
@@ -266,25 +267,42 @@ public class Methods {
 
     public By getBy(String jsonKey){
 
-        JSONObject jsonFile = getJsonFile();
+        JSONObject jsonFile = getJsonFile(jsonKey);
         String value = getValue(jsonKey, jsonFile);
         String type = getType(jsonKey, jsonFile);
-        By byElement = getElementInfoToBy(value, type);
+        By byElement = getElementInfoToBy(jsonKey, value, type);
         return byElement;
+
     }
 
-    public JSONObject getJsonFile() {
+    public JSONObject getJsonFile(String key) {
 
+        List<String> jsonFilesPath = getJsonPath();
+        int jsonFilesPathSize = jsonFilesPath.size();
         JSONObject JsonFile = null;
-        try{
-            String contents = new String((Files.readAllBytes(Paths.get(JSON_FILE_PATH))));
-            JsonFile = new JSONObject(contents);
-            return JsonFile;
+        int size = 0;
+
+        try {
+            while ( JsonFile == null && size != jsonFilesPathSize ){
+                if ( JsonFile == null ) {
+                    String path = jsonFilesPath.get(size);
+                    String contents = new String((Files.readAllBytes(Paths.get(path))));
+                    JsonFile = new JSONObject(contents);
+                    if ( JsonFile.has(key) ) {
+                        size = jsonFilesPathSize;
+                    } else {
+                        JsonFile = null;
+                        size++;
+                    }
+                } else {
+                    size = jsonFilesPathSize;
+                }
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return JsonFile;
+
     }
 
     public String getValue(String jsnKy, JSONObject jsonFile){
@@ -301,6 +319,7 @@ public class Methods {
             e.printStackTrace();
         }
         return value;
+
     }
 
     public String getType(String jsnKy, JSONObject jsonFile){
@@ -317,12 +336,13 @@ public class Methods {
             e.printStackTrace();
         }
         return type;
+
     }
 
-    public By getElementInfoToBy(String byValue, String selectorType) {
+    public By getElementInfoToBy(String key, String byValue, String selectorType) {
 
         By by = null;
-        switch (selectorType){
+        switch ( selectorType ){
             case "cssSelector":
                 by = By.cssSelector(byValue);
                 break;
@@ -342,10 +362,12 @@ public class Methods {
                 by = By.name(byValue);
                 break;
             default:
-                throw new NullPointerException("'" + selectorType + "' Element tipi hatalı \n" +
-                        "Element Types : id, cssSelector, xpath, className, tagName, name");
+                throw new NullPointerException
+                        ( "\nHatali element tipi! ( " + key + " )" + " Key'inin '" + selectorType + "' element tipi hatali \n" +
+                                "Element Types : id, cssSelector, xpath, className, tagName, name");
         }
         return by;
+
     }
 
     public void clickAlertCancelButton() {
@@ -470,6 +492,40 @@ public class Methods {
         }
 
         return false;
+    }
+
+    public List<String> getJsonFilesName() {
+
+        File folder = new File(JSON_FILE_PATH);
+        List<String> jsonFiles = new ArrayList<String>();
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile() && listOfFiles[i].getName().endsWith(".json")) {
+                jsonFiles.add(listOfFiles[i].getName());
+            } else if (listOfFiles[i].isDirectory()) {
+                //jsonFiles.add(listOfFiles[i].getName());
+            }
+        }
+        return jsonFiles;
+    }
+
+    public List<String> getJsonPath() {
+
+        String jsonFilePath = helpers.ProjectConsts.WRITE_JSON_FILE_PATH;
+        List<String> jFiles = getJsonFilesName();
+        List<String> newFiles = new ArrayList<>();
+        int jFileSize = jFiles.size();
+
+        for ( int i = 0 ; i < jFileSize ; i++ ) {
+
+            String newJsonFilePath = jsonFilePath + jFiles.get(i);
+            newFiles.add(newJsonFilePath);
+            //System.out.println(newJsonFilePath);
+
+        }
+        return newFiles;
+
     }
 
 }
