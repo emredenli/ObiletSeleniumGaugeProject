@@ -1,0 +1,36 @@
+{
+
+  "ObiletUyeGirisiBtn": {
+    "value": "li[class='login'] a",
+    "type": "cssSelector"
+  },
+  "ObiletUyeGirisiHeaderText": {
+    "value": "//h2[text()='Üye Girişi']",
+    "type": "xpath"
+  },
+  "ObiletEPostaAdresiTextBox": {
+    "value": "input[name='username']",
+    "type": "cssSelector"
+  },
+  "ObiletParolaTextBox": {
+    "value": "input[name='password']",
+    "type": "cssSelector"
+  },
+  "ObiletGirisYapBtn": {
+    "value": "button[class='login login-button']",
+    "type": "cssSelector"
+  },
+  "ObiletErrorMessage": {
+    "value": "label[class='error error-message']",
+    "type": "cssSelector"
+  },
+  "ObiletHesabımText": {
+    "value": "//a[text()='Hesabım']",
+    "type": "xpath"
+  },
+  "ObiletKullanıcıAdıveSifreniziKontrolEderekTekrarDeneyinizText": {
+    "value": "//label[contains(text(), 'Kullanıcı adı ve şifrenizi kontrol ederek tekrar deneyiniz.') and @class='error error-message']",
+    "type": "xpath"
+  }
+
+}
