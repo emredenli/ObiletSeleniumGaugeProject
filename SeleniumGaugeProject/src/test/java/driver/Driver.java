@@ -1,7 +1,9 @@
 package driver;
 
+import chromeDriver.chromeDriverMethods.ChromeDriverMethods;
 import com.thoughtworks.gauge.*;
 import helpers.ProjectConsts;
+import methods.Methods;
 import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,8 +19,17 @@ public class Driver {
     public static WebDriver webDriver;
     public static ConcurrentHashMap<String,Object> TestMap;
 
+    ChromeDriverMethods chromeDriverMethods;
+
+    public Driver (){
+
+        this.chromeDriverMethods = new ChromeDriverMethods();
+    }
+
     @BeforeScenario
     public void setUp(ExecutionContext executionContext) {
+
+        ChromeDriverMethods.compareDriverVersion();
 
         System.out.println("==========================================================================================================================================");
         System.out.println("--------------------------------------------------------- ObiletAutomationTest -----------------------------------------------------------");
