@@ -1,3 +1,8 @@
 
 # ObiletHotelScenarios
-* "1" saniye bekle
+* "ObiletOtelSelectBtn" elementine tıklanır
+* "ObiletOtelNereyeTextBox" elementine "Manisa" değerini yaz
+* "ObiletOtelNereyeTextBox" elementinin görünür olması kontrol edilir
+* "ObiletOtelManisaTextSelect" elementine tıklanır
+* "ObiletOtelOtelAraBtn" elementine tıklanır
+* "3" saniye bekle

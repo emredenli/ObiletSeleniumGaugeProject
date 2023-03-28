@@ -1,8 +1,28 @@
 {
 
-  "": {
-    "value": "",
-    "type": ""
+  "ObiletFeribotSelectBtn": {
+    "value": "a[data-event-action='Sea']",
+    "type": "cssSelector"
+  },
+  "ObiletFeribotNeredenTextBox": {
+    "value": "origin-input",
+    "type": "id"
+  },
+  "ObiletFeribotYalovaTextSelect": {
+    "value": "#origin > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletFeribotNereyeTextBox": {
+    "value": "destination-input",
+    "type": "id"
+  },
+  "ObiletFeribotYenikapıTextSelect": {
+    "value": "#destination > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletFeribotFeribotBiletiBulBtn": {
+    "value": "button#search-button",
+    "type": "cssSelector"
   }
 
 }

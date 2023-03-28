@@ -1,8 +1,20 @@
 {
 
-  "": {
-    "value": "",
-    "type": ""
+  "ObiletOtelSelectBtn": {
+    "value": "a[data-event-action='Hotel']",
+    "type": "cssSelector"
+  },
+  "ObiletOtelNereyeTextBox": {
+    "value": "origin-input",
+    "type": "id"
+  },
+  "ObiletOtelManisaTextSelect": {
+    "value": "#origin > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletOtelOtelAraBtn": {
+    "value": "button#search-button",
+    "type": "cssSelector"
   }
 
 }

@@ -1,3 +1,12 @@
 
 # ObiletSeaScenarios
-* "1" saniye bekle
+* Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* "ObiletFeribotSelectBtn" elementine tıklanır
+* "ObiletFeribotNeredenTextBox" elementine "Yalova" değerini yaz
+* "ObiletFeribotNeredenTextBox" elementinin görünür olması kontrol edilir
+* "ObiletFeribotYalovaTextSelect" elementine tıklanır
+* "ObiletFeribotNereyeTextBox" elementine "Yenikapı" değerini yaz
+* "ObiletFeribotNereyeTextBox" elementinin görünür olması kontrol edilir
+* "ObiletFeribotYenikapıTextSelect" elementine tıklanır
+* "ObiletFeribotFeribotBiletiBulBtn" elementine tıklanır
+* "3" saniye bekle
