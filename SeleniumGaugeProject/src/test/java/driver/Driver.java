@@ -3,7 +3,6 @@ package driver;
 import chromeDriver.chromeDriverMethods.ChromeDriverMethods;
 import com.thoughtworks.gauge.*;
 import helpers.ProjectConsts;
-import methods.Methods;
 import org.apache.commons.lang.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

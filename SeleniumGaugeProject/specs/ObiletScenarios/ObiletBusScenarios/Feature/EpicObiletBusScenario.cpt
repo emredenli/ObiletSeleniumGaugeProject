@@ -3,10 +3,6 @@
 * <url> gelen url ile aynı mı
 * Obilet - Aydınlatma Metni PopUp'ı kapatılır
 
-# Obilet - Aydınlatma Metni PopUp'ı kapatılır
-* "ObiletCookiesCloseBtn" elementine tıklanır
-* "ObiletCookiesCloseBtn" elementinin sayfada görünür olmadığı kontrol edilir
-
 # Obilet - Anasayfada 'Otobüs' seçim butonuna tıklanır
 * "ObiletBusSelectBtn" elementine tıklanır
 * "ObiletBusMenuSelectControl" elementinin görünür olması kontrol edilir

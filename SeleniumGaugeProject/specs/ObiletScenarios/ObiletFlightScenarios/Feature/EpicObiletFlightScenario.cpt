@@ -1,5 +1,12 @@
-Created by testinium on 27.03.2023
 
-This is a concept file with following syntax for each concept.
 # EpicObiletFlightScenario
-* "1" saniye bekle
+* Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* "ObiletUcakSelectBtn" elementine tıklanır
+* "ObiletUcakNeredenTextBox" elementine "İzmir" değerini yaz
+* "ObiletUcakNeredenTextBox" elementinin görünür olması kontrol edilir
+* "ObiletUcakIzmirTextSelect" elementine tıklanır
+* "ObiletUcakNereyeTextBox" elementine "Sabiha Gökçen" değerini yaz
+* "ObiletUcakNereyeTextBox" elementinin görünür olması kontrol edilir
+* "ObiletUcakSabihaGokcenTextSelect" elementine tıklanır
+* "ObiletUcakUcakBiletiBulBtn" elementine tıklanır
+* "3" saniye bekle

@@ -16,3 +16,7 @@
 * "ObiletParolaTextBox" elementine "testAccount123" değerini yaz
 * "ObiletGirisYapBtn" elementine tıklanır
 * "ObiletKullanıcıAdıveSifreniziKontrolEderekTekrarDeneyinizText" elementinin görünür olması kontrol edilir
+
+# Obilet - Aydınlatma Metni PopUp'ı kapatılır
+* "ObiletCookiesCloseBtn" elementine tıklanır
+* "ObiletCookiesCloseBtn" elementinin sayfada görünür olmadığı kontrol edilir

@@ -5,9 +5,7 @@ import org.json.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.By;
@@ -24,7 +22,6 @@ import java.util.regex.Pattern;
 
 import static helpers.ProjectConsts.JSON_FILE_PATH;
 import static org.jsoup.helper.Validate.fail;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Methods {
 

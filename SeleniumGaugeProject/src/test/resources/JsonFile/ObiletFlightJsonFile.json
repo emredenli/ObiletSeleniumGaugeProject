@@ -1,8 +1,28 @@
 {
 
-  "": {
-    "value": "",
-    "type": ""
+  "ObiletUcakSelectBtn": {
+    "value": "a[data-event-action='Flight']",
+    "type": "cssSelector"
+  },
+  "ObiletUcakNeredenTextBox": {
+    "value": "origin-input",
+    "type": "id"
+  },
+  "ObiletUcakIzmirTextSelect": {
+    "value": "#origin > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletUcakNereyeTextBox": {
+    "value": "destination-input",
+    "type": "id"
+  },
+  "ObiletUcakSabihaGokcenTextSelect": {
+    "value": "#destination > .results > ul > li",
+    "type": "cssSelector"
+  },
+  "ObiletUcakUcakBiletiBulBtn": {
+    "value": "button#search-button",
+    "type": "cssSelector"
   }
 
 }
