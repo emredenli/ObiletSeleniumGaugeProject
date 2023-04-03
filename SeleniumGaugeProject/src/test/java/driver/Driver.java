@@ -25,10 +25,15 @@ public class Driver {
         this.chromeDriverMethods = new ChromeDriverMethods();
     }
 
-    @BeforeScenario
-    public void setUp(ExecutionContext executionContext) {
+    @BeforeSuite
+    public void beforeSuite() {
 
         ChromeDriverMethods.compareDriverVersion();
+
+    }
+
+    @BeforeScenario
+    public void setUp(ExecutionContext executionContext) {
 
         System.out.println("==========================================================================================================================================");
         System.out.println("--------------------------------------------------------- ObiletAutomationTest -----------------------------------------------------------");
