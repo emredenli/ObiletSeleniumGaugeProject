@@ -1,5 +1,6 @@
 package chromeDriver.chromeDriverMethods;
 
+import chromeDriver.chromeDriverConsts.ChromeDriverConsts;
 import org.json.JSONObject;
 
 import java.io.*;
@@ -16,13 +17,6 @@ import java.util.zip.ZipInputStream;
 import static org.apache.commons.io.FileUtils.forceDelete;
 
 public class ChromeDriverMethods {
-
-    public static String DRIVER_JSON = "src/test/java/chromeDriver/chromeDriverJson/chromeDriverVersion.json";
-    public static String DRIVER_DOWNLOAD_PATH = "C:\\Users\\testinium\\Downloads\\chromedriver_win32.zip";
-    public static String DRIVER_DESTDIR_PATH = "C:\\Users\\testinium\\Desktop\\ObiletSeleniumGaugeProjectGit\\SeleniumGaugeProject\\src\\test\\resources\\driver\\chrome";
-    public static String PROJECT_DESTDIR_PATH = "src/test/resources/driver/chrome";
-    public static String DRIVER_JSON_LONG_PATH = "C:\\Users\\testinium\\Desktop\\ObiletSeleniumGaugeProjectGit\\SeleniumGaugeProject\\src\\test\\java\\chromeDriver\\chromeDriverJson\\chromeDriverVersion.json";
-    public static String DRIVER_LICENSE_PATH = "C:\\Users\\testinium\\Desktop\\ObiletSeleniumGaugeProjectGit\\SeleniumGaugeProject\\src\\test\\resources\\driver\\chrome\\LICENSE.chromedriver";
 
     public static String getDriverVersion(){
 
@@ -56,7 +50,7 @@ public class ChromeDriverMethods {
         String newVersion = getDriverVersion();
         String version = null;
         try {
-            String contents = new String((Files.readAllBytes(Paths.get(DRIVER_JSON))));
+            String contents = new String((Files.readAllBytes(Paths.get(ChromeDriverConsts.DRIVER_JSON))));
             JSONObject JsonFile = new JSONObject(contents);
             Object getValue = JsonFile.getJSONObject("ChromeVersion").getString("version");
             version = (String) getValue;
@@ -86,8 +80,8 @@ public class ChromeDriverMethods {
             Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome https://chromedriver.storage.googleapis.com/" + version_number + "/chromedriver_win32.zip"});
             TimeUnit.SECONDS.sleep(2);
 
-            Path source = Paths.get(DRIVER_DOWNLOAD_PATH);
-            Path target = Paths.get(DRIVER_DESTDIR_PATH);
+            Path source = Paths.get(ChromeDriverConsts.DRIVER_DOWNLOAD_PATH);
+            Path target = Paths.get(ChromeDriverConsts.DRIVER_DESTDIR_PATH);
 
             try {
 
@@ -182,24 +176,18 @@ public class ChromeDriverMethods {
 
     public static void deleteFolder() {
 
-        File file = new File(PROJECT_DESTDIR_PATH);
+        File file = new File(ChromeDriverConsts.DRIVER_DESTDIR_PATH);
+
         try {
+            Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe");
 
-            IOException exception = null;
-            try {
-                forceDelete(file);
-                TimeUnit.SECONDS.sleep(2);
-                File theDir = new File(PROJECT_DESTDIR_PATH);
-                if (!theDir.exists()){
-                    theDir.mkdirs();
-                }
-            } catch (final IOException ioe) {
-                exception = ioe;
+            forceDelete(file);
+            TimeUnit.SECONDS.sleep(2);
+            File theDir = new File(ChromeDriverConsts.DRIVER_DESTDIR_PATH);
+            if (!theDir.exists()){
+                theDir.mkdirs();
             }
 
-            if (null != exception) {
-                throw exception;
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -239,7 +227,7 @@ public class ChromeDriverMethods {
 
 
             FileWriter writer = new FileWriter
-                    (DRIVER_JSON_LONG_PATH,
+                    (ChromeDriverConsts.DRIVER_JSON_LONG_PATH,
                             false); //overwrites the content of file
             writer.write(str);
             writer.close();
@@ -252,10 +240,10 @@ public class ChromeDriverMethods {
 
     public static void deleteUnusedFolder() {
 
-        File downloadDriverFolder = new File(DRIVER_DOWNLOAD_PATH);
+        File downloadDriverFolder = new File(ChromeDriverConsts.DRIVER_DOWNLOAD_PATH);
         downloadDriverFolder.delete();
 
-        File licenseChromeDriverFile = new File(DRIVER_LICENSE_PATH);
+        File licenseChromeDriverFile = new File(ChromeDriverConsts.DRIVER_LICENSE_PATH);
         licenseChromeDriverFile.delete();
     }
 

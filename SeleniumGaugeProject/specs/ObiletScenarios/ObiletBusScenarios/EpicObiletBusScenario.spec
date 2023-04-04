@@ -41,3 +41,8 @@ deneme
 * Otobüs boş koltuk cinsiyet seçimi yapılır
 * "ObiletOtobusSectiginizKoltuklarText" elementinin "alt" attribute değerini "Secilen_Koltuklar" keyinde tut
 * "ObiletOtobusSecilenKoltukText" elementinin text değeriyle "Secilen_Koltuklar" 'deki elementin text değeri eşit mi
+
+
+deneme1
+---------
+* "5" saniye bekle
